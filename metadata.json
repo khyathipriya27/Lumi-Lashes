@@ -1,0 +1,6 @@
+{
+  "name": "Lumi Lashes — Luxury Lash Extension Studio",
+  "description": "Boutique luxury lash studio where personalized lash artistry meets a playful, retro-luxe beauty experience. Book classic, hybrid, volume sets and lash lifts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

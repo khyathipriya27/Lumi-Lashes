@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cloudy: #BAD6FD;
+  --color-merlot: #570301;
+  --color-rose: #F5BAD5;
+  --color-buttercream: #F7E594;
+  --color-ivory: #FFFAF2;
+  --color-nude: #EBD9C9;
+  --color-mocha: #9E7C6B;
+  --color-espresso: #3E2A25;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-script: "Caveat", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: var(--color-espresso);
+    background-color: var(--color-cloudy);
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+    font-variation-settings: "SOFT" 60, "WONK" 0;
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-2deg); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-float {
+  animation: float-gentle 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 4.5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Custom retro scallop borders and decorative shapes */
+.scallop-bottom {
+  mask-image: radial-gradient(circle 12px at bottom center, transparent 95%, black 100%);
+  mask-size: 24px 100%;
+}
+
+/* Subtle editorial shadow */
+.shadow-retro {
+  box-shadow: 4px 4px 0px #570301;
+}
+
+.shadow-retro-lg {
+  box-shadow: 6px 6px 0px #570301;
+}
+
+.shadow-retro-rose {
+  box-shadow: 4px 4px 0px #F5BAD5;
+}
+
+.shadow-retro-cream {
+  box-shadow: 5px 5px 0px #F7E594;
+}
